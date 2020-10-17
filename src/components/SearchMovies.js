@@ -20,6 +20,7 @@ export default function SearchMovies() {
 
   return (
     <>
+    <h2>Search The Ark</h2>
       <form className="form" onSubmit={searchMovies}>
         <label className="label" htmlFor="search">
           Movie Name

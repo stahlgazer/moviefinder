@@ -20,6 +20,7 @@ export default function PopularMovies() {
 
   return (
     <div>
+      <h2>Popular New Movies</h2>
       {popular
         .filter((movie) => movie.vote_average >= 7)
         .map((movie) => {

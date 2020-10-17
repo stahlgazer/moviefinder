@@ -12,13 +12,13 @@ export default function PopularCards({ movie }) {
       <div className="card--content">
         <h3 className="card--title">{movie.title}</h3>
         <p>
-          <small>RELEASE DATE: {movie.release_date}</small>
+          <small><b>RELEASE DATE</b>: {movie.release_date}</small>
         </p>
         <p>
-          <small>RATING: {movie.vote_average}/10</small>
+          <small><b>RATING</b>: {movie.vote_average}/10</small>
         </p>
         <p>
-          <small>VOTE COUNT: {movie.vote_count}</small>
+          <small><b>VOTES</b>: {movie.vote_count}</small>
         </p>
         <p className="card--desc">{movie.overview}</p>
       </div>
