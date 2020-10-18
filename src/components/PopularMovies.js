@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import PopularCards from "./PopularCards";
+import Cards from "./Cards";
 
 export default function PopularMovies() {
   const [popular, setPopular] = useState([]);
@@ -24,12 +24,13 @@ export default function PopularMovies() {
       <div
         style={{
           display: "flex",
+          flexWrap: "wrap",
         }}
       >
         {popular
           .filter((movie) => movie.vote_average >= 6.5)
           .map((movie) => {
-            return <PopularCards movie={movie} key={movie.id} />;
+            return <Cards movie={movie} key={movie.id} />;
           })}
       </div>
     </>

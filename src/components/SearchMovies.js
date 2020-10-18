@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import SearchCards from "./SearchCards.js";
+import Cards from "./Cards.js";
 
 export default function SearchMovies() {
   const [search, setSearch] = useState("");
@@ -37,11 +37,14 @@ export default function SearchMovies() {
           Search
         </button>
       </form>
-      <div className="search-list">
+      <div style={{
+        display:'flex',
+        flexWrap:'wrap'
+      }}>
         {movies
           .filter((movie) => movie.poster_path)
           .map((movie) => (
-            <SearchCards movie={movie} key={movie.id} />
+            <Cards movie={movie} key={movie.id} />
           ))}
       </div>
     </>

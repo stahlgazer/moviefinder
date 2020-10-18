@@ -1,5 +1,4 @@
 import React from "react";
-import theatre from "../images/theatre.jpg"
 
 export default function Banner() {
   return (
