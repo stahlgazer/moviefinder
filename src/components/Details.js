@@ -25,11 +25,14 @@ export default function AlertDialog({ movie }) {
 
   return (
     <div>
-      <Button variant="outlined" color="primary" onClick={handleClickOpen}>
-        <InfoIcon />
-      </Button>
-      <Button variant="outlined" color="secondary">
-        <FavoriteIcon />
+      <Button
+        startIcon={<InfoIcon />}
+        variant="outlined"
+        color="primary"
+        size="small"
+        onClick={handleClickOpen}
+      >
+        Info
       </Button>
       <Dialog
         open={open}

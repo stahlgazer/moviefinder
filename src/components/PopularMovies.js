@@ -21,11 +21,13 @@ export default function PopularMovies() {
   return (
     <>
       <h2>Popular New Movies</h2>
-      <div style={{
-        display:'flex'
-      }}>
+      <div
+        style={{
+          display: "flex",
+        }}
+      >
         {popular
-          .filter((movie) => movie.vote_average >= 6)
+          .filter((movie) => movie.vote_average >= 6.5)
           .map((movie) => {
             return <PopularCards movie={movie} key={movie.id} />;
           })}

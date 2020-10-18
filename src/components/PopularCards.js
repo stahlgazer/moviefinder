@@ -13,9 +13,10 @@ const useStyles = makeStyles({
   root: {
     maxWidth: 345,
     width: "100%",
+    margin: 10,
   },
   media: {
-    height: 200,
+    minHeight: 300,
   },
 });
 
@@ -25,19 +26,17 @@ export default function PopularCards({ movie }) {
 
   return (
     <Card className={classes.root}>
-      <CardActionArea>
-        <CardMedia
-          className={classes.media}
-          image={`https://image.tmdb.org/t/p/w185_and_h278_bestv2/${movie.poster_path}`}
-          title={movie.title + " poster"}
-        />
-        <CardContent>
-          <p>
-            <b>RATING</b>: {movie.vote_average}
-          </p>
-        </CardContent>
-        <Details movie={movie} />
-      </CardActionArea>
+      <CardMedia
+        className={classes.media}
+        image={`https://image.tmdb.org/t/p/w185_and_h278_bestv2/${movie.poster_path}`}
+        title={movie.title + " poster"}
+      />
+      <CardContent>
+        <p>
+          <b>RATING</b>: {movie.vote_average}
+        </p>
+      </CardContent>
+      <Details movie={movie} />
     </Card>
   );
 }

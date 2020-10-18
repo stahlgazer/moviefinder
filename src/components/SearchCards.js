@@ -1,5 +1,5 @@
 import React from "react";
-import Details from './Details';
+import Details from "./Details";
 
 export default function SearchCards({ movie }) {
   console.log(movie);
