@@ -7,7 +7,7 @@ export default function Banner() {
         Not Quite Sure What To Watch?<br></br>
         We Have You Covered!
       </h2>
-      <h3>Coming Soon: Create Your Own Favorite Watch Lists</h3>
+      <h3>Find What To Watch And Create Your Own Favorite Watch Lists</h3>
     </div>
   );
 }

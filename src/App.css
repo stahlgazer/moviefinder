@@ -1,10 +1,15 @@
 .App {
   text-align: center;
-  font-size:1rem;
+  font-size: 100%;
   font-family: "Squada One", cursive;
 }
 
 p {
   font-family: "Krona One", sans-serif;
-  font-size:.75rem;
+  font-size: 80%;
+}
+
+h3 {
+  font-family: "Krona One", sans-serif;
+  font-size: 80%;
 }

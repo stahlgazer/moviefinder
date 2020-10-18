@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import PopularCard from "./PopularCards";
+import PopularCards from "./PopularCards";
 
 export default function PopularMovies() {
   const [popular, setPopular] = useState([]);
@@ -19,13 +19,17 @@ export default function PopularMovies() {
   console.log(popular);
 
   return (
-    <div>
+    <>
       <h2>Popular New Movies</h2>
-      {popular
-        .filter((movie) => movie.vote_average >= 7)
-        .map((movie) => {
-          return <PopularCard movie={movie} key={movie.id} />;
-        })}
-    </div>
+      <div style={{
+        display:'flex'
+      }}>
+        {popular
+          .filter((movie) => movie.vote_average >= 6)
+          .map((movie) => {
+            return <PopularCards movie={movie} key={movie.id} />;
+          })}
+      </div>
+    </>
   );
 }

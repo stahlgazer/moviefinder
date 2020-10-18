@@ -5,6 +5,10 @@ import DialogActions from "@material-ui/core/DialogActions";
 import DialogContent from "@material-ui/core/DialogContent";
 import DialogContentText from "@material-ui/core/DialogContentText";
 import DialogTitle from "@material-ui/core/DialogTitle";
+import FavoriteIcon from "@material-ui/icons/Favorite";
+import CloseIcon from "@material-ui/icons/Close";
+import PlayCircleOutlineIcon from "@material-ui/icons/PlayCircleOutline";
+import InfoIcon from "@material-ui/icons/Info";
 
 export default function AlertDialog({ movie }) {
   const [open, setOpen] = React.useState(false);
@@ -16,12 +20,16 @@ export default function AlertDialog({ movie }) {
   const handleClose = () => {
     setOpen(false);
   };
+
   console.log(movie);
 
   return (
     <div>
       <Button variant="outlined" color="primary" onClick={handleClickOpen}>
-        Expand
+        <InfoIcon />
+      </Button>
+      <Button variant="outlined" color="secondary">
+        <FavoriteIcon />
       </Button>
       <Dialog
         open={open}
@@ -29,36 +37,61 @@ export default function AlertDialog({ movie }) {
         aria-labelledby="alert-dialog-title"
         aria-describedby="alert-dialog-description"
       >
-        <DialogContent>
-          <h3>{movie.title}</h3>
-          <img
-            src={`https://image.tmdb.org/t/p/w185_and_h278_bestv2/${movie.poster_path}`}
-            alt={movie.title + " poster"}
-          />
-          <p>{movie.overview}</p>
-          <p>
-            <small>
-              <b>RATING</b>: {movie.vote_average}/10
-            </small>
-          </p>
-
-          <p>
-            <small>
-              <b>RELEASE DATE</b>: {movie.release_date}
-            </small>
-          </p>
-          <p>
-            <small>
-              <b>VOTES</b>: {movie.vote_count}
-            </small>
-          </p>
-        </DialogContent>
+        <div
+          style={{
+            display: "flex",
+          }}
+        >
+          <DialogContent
+            style={{
+              minWidth: "200px",
+            }}
+          >
+            <img
+              src={`https://image.tmdb.org/t/p/w185_and_h278_bestv2/${movie.poster_path}`}
+              alt={movie.title + " poster"}
+            />
+          </DialogContent>
+          <DialogContent>
+            <h3>{movie.title}</h3>
+            <p>
+              <small>
+                <b>RATING</b>: {movie.vote_average}/10
+              </small>
+            </p>
+            <p>
+              <small>
+                <b>RELEASE DATE</b>: {movie.release_date}
+              </small>
+            </p>
+            <p>
+              <small>
+                <b>VOTES</b>: {movie.vote_count}
+              </small>
+            </p>
+            <p>
+              <small>
+                <b>OVERVIEW</b>:{movie.overview}
+              </small>
+            </p>
+            <Button
+              startIcon={<PlayCircleOutlineIcon />}
+              size="small"
+              color="primary"
+              variant="outlined"
+              target="_blank"
+              href={`https://www.youtube.com/results?search_query=${movie.title}+trailer`}
+            >
+              Trailers
+            </Button>
+          </DialogContent>
+        </div>
         <DialogActions>
-          <Button onClick={handleClose} color="primary">
-            Add to Favorites
+          <Button onClick={handleClose} color="secondary">
+            <FavoriteIcon />
           </Button>
           <Button onClick={handleClose} color="primary" autoFocus>
-            Close
+            <CloseIcon />
           </Button>
         </DialogActions>
       </Dialog>
