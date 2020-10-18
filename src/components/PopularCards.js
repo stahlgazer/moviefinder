@@ -1,4 +1,5 @@
 import React from "react";
+import Details from './Details';
 
 export default function PopularCards({ movie }) {
   console.log(movie);
@@ -22,6 +23,7 @@ export default function PopularCards({ movie }) {
         </p>
         <p className="card--desc">{movie.overview}</p>
       </div>
+      <Details movie={movie}/>
     </div>
   );
 }

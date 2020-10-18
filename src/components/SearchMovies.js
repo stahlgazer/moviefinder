@@ -29,7 +29,7 @@ export default function SearchMovies() {
           className="input"
           type="text"
           name="search"
-          placeholder="i.e. Jurassic Park"
+          placeholder="Jumanji"
           value={search}
           onChange={(e) => setSearch(e.target.value)}
         />
@@ -37,7 +37,7 @@ export default function SearchMovies() {
           Search
         </button>
       </form>
-      <div className="card-list">
+      <div className="search-list">
         {movies
           .filter((movie) => movie.poster_path)
           .map((movie) => (
