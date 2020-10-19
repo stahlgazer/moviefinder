@@ -3,13 +3,21 @@ import Button from "@material-ui/core/Button";
 import Dialog from "@material-ui/core/Dialog";
 import DialogActions from "@material-ui/core/DialogActions";
 import DialogContent from "@material-ui/core/DialogContent";
-import FavoriteIcon from "@material-ui/icons/Favorite";
+import Favorite from "./Favorite";
 import CloseIcon from "@material-ui/icons/Close";
 import PlayCircleOutlineIcon from "@material-ui/icons/PlayCircleOutline";
 import InfoIcon from "@material-ui/icons/Info";
+import { makeStyles } from "@material-ui/core/styles";
+
+const useStyles = makeStyles({
+  info: {
+    color: "rgb(0, 195, 230)",
+  },
+});
 
 export default function AlertDialog({ movie }) {
   const [open, setOpen] = React.useState(false);
+  const classes = useStyles();
 
   const handleClickOpen = () => {
     setOpen(true);
@@ -19,18 +27,16 @@ export default function AlertDialog({ movie }) {
     setOpen(false);
   };
 
-  console.log(movie);
-
   return (
     <div>
       <Button
-        startIcon={<InfoIcon />}
         variant="outlined"
-        color="primary"
+        className={classes.info}
         size="small"
         onClick={handleClickOpen}
       >
-        Info
+        <InfoIcon />
+        Details
       </Button>
       <Dialog
         open={open}
@@ -88,9 +94,7 @@ export default function AlertDialog({ movie }) {
           </DialogContent>
         </div>
         <DialogActions>
-          <Button onClick={handleClose} color="secondary">
-            <FavoriteIcon />
-          </Button>
+          <Favorite handleClose={handleClose} movie={movie} />
           <Button onClick={handleClose} color="primary" autoFocus>
             <CloseIcon />
           </Button>

@@ -13,6 +13,7 @@ export default function SearchMovies() {
       const res = await fetch(url);
       const data = await res.json();
       setMovies(data.results);
+      setSearch("");
     } catch (err) {
       console.error(err);
     }
@@ -20,7 +21,7 @@ export default function SearchMovies() {
 
   return (
     <>
-      <h2>Search The Ark</h2>
+      <h3>Search The Ark</h3>
       <form className="form" onSubmit={searchMovies}>
         <label className="label" htmlFor="search">
           Movie Name
@@ -29,7 +30,7 @@ export default function SearchMovies() {
           className="input"
           type="text"
           name="search"
-          placeholder="Jumanji"
+          placeholder="The Hunger Games"
           value={search}
           onChange={(e) => setSearch(e.target.value)}
         />
@@ -37,10 +38,12 @@ export default function SearchMovies() {
           Search
         </button>
       </form>
-      <div style={{
-        display:'flex',
-        flexWrap:'wrap'
-      }}>
+      <div
+        style={{
+          display: "flex",
+          flexWrap: "wrap",
+        }}
+      >
         {movies
           .filter((movie) => movie.poster_path)
           .map((movie) => (

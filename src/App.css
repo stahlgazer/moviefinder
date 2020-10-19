@@ -4,7 +4,7 @@ html {
 .App {
   text-align: center;
   font-size: 100%;
-  color:white;
+  color: white;
   font-family: "Krona One", sans-serif;
 }
 p {
@@ -14,10 +14,30 @@ p {
 h3 {
   font-family: "Krona One", sans-serif;
 }
-.banner{
-  background-color: white;
-  padding:1px;
+.banner {
+  background-color: black;
+  padding-bottom: 20px;
+  padding-top: 11px;
 }
-.banner-text{
-  color:#1f1d1d;
+.banner-text {
+  color: rgb(0, 195, 230);
+}
+.banner-text h3 {
+  min-width: 50%;
+  max-width: 60%;
+  box-shadow: -5px -5px 50px rgb(100, 100, 100);
+  margin: 0 auto;
+  border-radius: 50px;
+  padding: 20px;
+  color: rgb(255, 255, 255);
+  background-image: linear-gradient(
+    to bottom right,
+    rgb(114, 114, 114),
+    rgb(0, 0, 0),
+    rgb(0, 195, 230)
+  );
+}
+.favorites {
+  text-align: left;
+  margin: 1% 2%;
 }

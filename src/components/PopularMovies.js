@@ -16,11 +16,11 @@ export default function PopularMovies() {
       console.error(err);
     }
   };
-  console.log(popular);
+  // console.log(popular);
 
   return (
     <>
-      <h2>Popular New Movies</h2>
+      <h3>Popular New Movies</h3>
       <div
         style={{
           display: "flex",

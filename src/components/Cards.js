@@ -8,8 +8,8 @@ import CardMedia from "@material-ui/core/CardMedia";
 const useStyles = makeStyles({
   root: {
     borderRadius: 10,
-    width:'200px',
-    margin: '10px auto',
+    width: "200px",
+    margin: "10px auto",
     backgroundColor: "black",
     color: "white",
   },
@@ -19,7 +19,7 @@ const useStyles = makeStyles({
 });
 
 export default function SearchCards({ movie }) {
-  console.log(movie);
+  // console.log(movie);
   const classes = useStyles();
 
   return (
