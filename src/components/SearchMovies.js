@@ -1,5 +1,7 @@
 import React, { useState } from "react";
+import TextField from "@material-ui/core/TextField";
 import Cards from "./Cards.js";
+import SearchIcon from "@material-ui/icons/Search";
 
 export default function SearchMovies() {
   const [search, setSearch] = useState("");
@@ -22,9 +24,9 @@ export default function SearchMovies() {
   return (
     <>
       <h3>Search The Ark</h3>
-      <form className="form" onSubmit={searchMovies}>
+      <form className="form" onSubmit={searchMovies} style={{display:'flex', alignItems:'center', justifyContent:'center'}}>
         <label className="label" htmlFor="search">
-          Movie Name
+          Movie Title:
         </label>
         <input
           className="input"
@@ -34,8 +36,8 @@ export default function SearchMovies() {
           value={search}
           onChange={(e) => setSearch(e.target.value)}
         />
-        <button className="button" type="submit" disabled={!search}>
-          Search
+        <button className="searchButton" type="submit" disabled={!search}>
+          <SearchIcon/>
         </button>
       </form>
       <div

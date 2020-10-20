@@ -13,6 +13,7 @@ p {
 }
 h3 {
   font-family: "Krona One", sans-serif;
+  color: rgb(0, 195, 230);
 }
 .banner {
   background-color: black;
@@ -40,4 +41,13 @@ h3 {
 .favorites {
   text-align: left;
   margin: 1% 2%;
+}
+.searchButton{
+  padding:4px;
+  border-radius: 5px;
+}
+.input{
+  border-radius: 5px;
+  padding:10px;
+  margin:5px;
 }

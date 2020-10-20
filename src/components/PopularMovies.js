@@ -28,7 +28,7 @@ export default function PopularMovies() {
         }}
       >
         {popular
-          .filter((movie) => movie.vote_average >= 6.5)
+          .filter((movie) => movie.vote_average >= 7)
           .map((movie) => {
             return <Cards movie={movie} key={movie.id} />;
           })}
