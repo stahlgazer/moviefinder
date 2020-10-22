@@ -32,7 +32,7 @@ export default function SearchMovies() {
           className="input"
           type="text"
           name="search"
-          placeholder="The Hunger Games"
+          placeholder=""
           value={search}
           onChange={(e) => setSearch(e.target.value)}
         />
