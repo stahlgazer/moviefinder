@@ -1,6 +1,5 @@
 import React from "react";
 import DirectionsBoatIcon from "@material-ui/icons/DirectionsBoat";
-import FavoriteIcon from "@material-ui/icons/Favorite";
 
 export default function Banner() {
   return (
