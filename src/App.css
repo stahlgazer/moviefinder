@@ -17,23 +17,19 @@ h3 {
 }
 .banner {
   background-color: black;
-  padding-bottom: 20px;
   padding-top: 11px;
 }
 .banner-text {
   color: rgb(0, 195, 230);
 }
 .banner-text h3 {
-  min-width: 50%;
-  max-width: 60%;
   box-shadow: -5px -5px 50px rgb(100, 100, 100);
   margin: 0 auto;
-  border-radius: 50px;
-  padding: 20px;
+  padding: 2%;
   color: rgb(255, 255, 255);
   background-image: linear-gradient(
     to bottom right,
-    rgb(114, 114, 114),
+    rgb(0, 81, 95),
     rgb(0, 0, 0),
     rgb(0, 195, 230)
   );
