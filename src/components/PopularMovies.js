@@ -20,7 +20,9 @@ export default function PopularMovies() {
 
   return (
     <>
-      <h3>Popular New Movies</h3>
+      <div className="popularh3">
+        <h3>Popular New Movies</h3>
+      </div>
       <div
         style={{
           display: "flex",

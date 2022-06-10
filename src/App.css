@@ -16,28 +16,33 @@ h3 {
   color: rgb(0, 195, 230);
 }
 .banner {
-  background-color: black;
+  position: relative;
   padding-top: 11px;
 }
+.banner::before {
+  content: "";
+  background-image: url("./images/moviebanner.jpg");
+  background-position: center;
+  opacity: 0.5;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+}
 .banner-text {
+  position: relative;
   color: rgb(0, 195, 230);
 }
 .banner-text h3 {
-  box-shadow: -5px -5px 50px rgb(100, 100, 100);
   margin: 0 auto;
   padding: 2%;
   color: rgb(255, 255, 255);
-  background-image: linear-gradient(
-    to bottom right,
-    rgb(0, 81, 95),
-    rgb(0, 0, 0),
-    rgb(0, 195, 230)
-  );
 }
 .favorites {
   text-align: left;
   margin: 1% 2%;
-  font-size:.8rem;
+  font-size: 0.8rem;
 }
 .searchButton {
   padding: 2px;
@@ -54,5 +59,11 @@ h3 {
   background: black;
   color: rgb(0, 195, 230);
   box-shadow: 0px 5px 15px black;
-  outline-style:none;
+  outline-style: none;
+}
+.popularh3 {
+  border-top: 1px solid rgb(82, 82, 82);
+  max-width:80%;
+  margin: 0 auto;
+  margin-top: 20px;
 }
