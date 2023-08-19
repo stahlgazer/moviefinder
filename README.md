@@ -7,14 +7,14 @@ The Movie Ark generates a list of the most popular new movies for users to see, 
 ## Key Features
 * The most popular new movies are automatically generated for the client.
 * Client can search the API for any movie.
-* Ratings, reviews, overview, details and more are available for any movie on record
+* Ratings, reviews, overviews, details, and more are available for any movie on record
 
 ## Getting Started
-No login or registration required, simply browse and enjoy on desktop, tablet, or smartphone.
+No login or registration is required, simply browse and enjoy on a desktop, tablet, or smartphone.
 This App uses https://www.themoviedb.org API in order to generate data.
 
 ### View Demo
-* https://moviefinder-nine.vercel.app/
+* https://cookbookapp.vercel.app/
 
 ### Dependencies
 * material-ui/core
