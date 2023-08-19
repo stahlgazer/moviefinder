@@ -14,7 +14,7 @@ No login or registration is required, simply browse and enjoy on a desktop, tabl
 This App uses https://www.themoviedb.org API in order to generate data.
 
 ### View Demo
-* https://cookbookapp.vercel.app/
+* https://moviefinder-nine.vercel.app/
 
 ### Dependencies
 * material-ui/core
